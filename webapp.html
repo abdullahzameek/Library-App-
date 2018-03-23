@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+    <title>Javascript QR scanner</title>
+
+    <script type="text/javascript" src="instascan.min.js"></script>
+
+  </head>
+  <body>
+    <video id="preview"></video>
+    <script type="text/javascript">
+
+	 let opts = {
+
+							  continuous: true,
+
+							  video: document.getElementById('preview'),
+
+							  mirror: false,
+
+							  captureImage: false,
+
+							  backgroundScan: true,
+
+							  refractoryPeriod: 5000,
+
+							  scanPeriod: 10
+							};
+
+	let scanner = new Instascan.Scanner(opts);
+  var list = [];
+
+
+      scanner.addListener('scan', function (content,image) {
+        console.log(content);
+        list.push(content);
+        console.log(`The list is ${list}`);
+        scanner.stop();
+
+      });
+      Instascan.Camera.getCameras().then(function (cameras) {
+        if (cameras.length > 0) {
+          scanner.start(cameras[0]);
+        } else {
+          console.error('No cameras found.');
+        }
+      }).catch(function (e) {
+        console.error(e);
+      });
+
+
+
+
+
+
+
+
+    </script>
+    </body>
+</html>
