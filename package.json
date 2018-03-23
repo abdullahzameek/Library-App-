@@ -2,11 +2,12 @@
   "name": "library-app-",
   "version": "1.0.0",
   "description": "Library App for HackNYU 2018",
+  "engines": {
+   "node": "^8.9.1"
+   },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-  "engines": {
-    "node": "^8.9.1"
   },
   "repository": {
     "type": "git",
