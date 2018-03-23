@@ -1,3 +1,5 @@
+// We'd like to thank Mateo Juvera Molina and Shantanu Bhatia for helping us debug and fix a few critical features.
+// Thanks, my dudes.
 const express = require('express') // import momdule
 var cors = require('cors')
 var path = require('path');
