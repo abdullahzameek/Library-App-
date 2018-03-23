@@ -5,15 +5,15 @@ var path = require('path');
 
 let app = express()
 app.use(cors())
-let port = 3636
-app.use(express.static(__dirname + '/Public'));
 
-var list = [410, 2, 3];
+app.use(express.static(__dirname + '/Public'));
+var port = process.env.PORT || 3636;
+var list = [2, 3];
 
 app.listen(port, () => {
   console.log('Room list')
 })
-
+ console.log('Express started on port ' + port);
 
 app.get('/roomlist', function(request, response, error) {
   response.sendFile(path.join(__dirname + '/View/MainScreen.html'))
