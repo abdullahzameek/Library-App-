@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/abdullahzameek/Library-App-#readme",
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "instascan": "^1.0.0"
   }
 }
