@@ -9,7 +9,7 @@
 
 
 function MakeMarSaysSave() {
-  fetch('http://localhost:3636/data')
+  fetch('https://libraryapphacknyu.herokuapp.com/data')
     .then(function(response) {
       return response.json();
     })
