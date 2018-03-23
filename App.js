@@ -28,7 +28,20 @@ app.get('/411', function(request, response, error) {
     response.sendFile(path.join(__dirname + '/View/MainScreen.html'))
 })
 
-app.get('/dummy', function(request, response, error) {
+app.get(`/room/:number`, function(request, response, error) {
   console.log('hi hi hi');
+  let num = parseInt(request.params.number);
+  if (list.includes(num)) {
+    var index = list.indexOf(num);
+    list.splice(index, 1);
+  } else {
+    list.push(num);
+  }
+  console.log(num, list);
+
+  response.redirect('/roomlist');
+})
+
+app.get('/data', function(request, response, error) {
   response.send(JSON.stringify(list));
 })

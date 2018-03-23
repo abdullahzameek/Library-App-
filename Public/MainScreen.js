@@ -9,7 +9,7 @@
 
 
 function MakeMarSaysSave() {
-  fetch('http://localhost:3636/dummy')
+  fetch('http://localhost:3636/data')
     .then(function(response) {
       return response.json();
     })
