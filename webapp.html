@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+    <title>Javascript QR scanner</title>
+
+    <script type="text/javascript" src="instascan.min.js"></script>
+
+  </head>
+  <body>
+    <video id="preview"></video>
+    <script type="text/javascript">
+<<<<<<< HEAD
+	 let opts = {
+							  continuous: true, // continuous scan
+							  video: document.getElementById('preview'),
+							  mirror: false, // mirror the camera
+							  captureImage: false, // include image as the result data
+							  backgroundScan: true, // active scan when tab is not active
+							  refractoryPeriod: 5000, // period (5 seconds) before the same QR code will be recognised
+=======
+
+	 let opts = {
+
+
+							  continuous: true, // continuous scan
+
+							  video: document.getElementById('preview'),
+
+							  mirror: false, // mirror the camera
+
+							  captureImage: false, // include image as the result data
+
+							  backgroundScan: true, // active scan when tab is not active
+
+							  refractoryPeriod: 5000, // period (5 seconds) before the same QR code will be recognised
+
+>>>>>>> fb9507abc3770c297fee811f2f71d3912f830adf
+							  scanPeriod: 1 // scan period in frames
+							};
+	let scanner = new Instascan.Scanner(opts);
+
+      scanner.addListener('scan', function (content,image) {
+        console.log(content);
+        scanner.stop();
+<<<<<<< HEAD
+=======
+
+>>>>>>> fb9507abc3770c297fee811f2f71d3912f830adf
+      });
+      Instascan.Camera.getCameras().then(function (cameras) {
+        if (cameras.length > 0) {
+          scanner.start(cameras[0]);
+        } else {
+          console.error('No cameras found.');
+        }
+      }).catch(function (e) {
+        console.error(e);
+      });
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+>>>>>>> fb9507abc3770c297fee811f2f71d3912f830adf
+    </script>
+    </body>
+</html>
