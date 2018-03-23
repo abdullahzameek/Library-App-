@@ -1,10 +1,3 @@
-// function changeColor(newColor) {
-//   console.log(0);
-//   var text = document.getElementById("variable");
-//   text.style.color = newColor;
-// }
-
-
 
 function MakeMarSaysSave() {
     document.getElementById('listOfItems').innerHTML = '';
@@ -12,11 +5,10 @@ function MakeMarSaysSave() {
     for (i = 401; i <= 441; i++) {
       var entry = document.createElement("li");
       entry.appendChild(document.createTextNode(i));
+      entry.style.color="green";
 
-
-      if (i==411)
-      entry.style.color = "red";
-
+      if (list.indexOf(i)>=0)
+        entry.style.color = "red";
 
       ul.appendChild(entry);
     }
