@@ -15,6 +15,10 @@ app.listen(port, () => {
 })
  console.log('Express started on port ' + port);
 
+app.get('/', function (req, res) {
+  res.redirect('/roomlist');
+})
+
 app.get('/roomlist', function(request, response, error) {
   response.sendFile(path.join(__dirname + '/View/MainScreen.html'))
 })
