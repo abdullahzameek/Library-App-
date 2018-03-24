@@ -19,7 +19,7 @@ function MakeMarSaysSave() {
       for (i = 401; i <= 441; i++) {
         var entry = document.createElement("li");
         entry.appendChild(document.createTextNode(i));
-        entry.style.color="green";
+        entry.style.color="white";
         if (myJson.indexOf(i)>=0) {
           entry.style.color = "red";
         }
