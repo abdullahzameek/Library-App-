@@ -29,7 +29,6 @@ app.get('/411', function(request, response, error) {
 })
 
 app.get(`/room/:number`, function(request, response, error) {
-  console.log('hi hi hi');
   let num = parseInt(request.params.number);
   if (list.includes(num)) {
     var index = list.indexOf(num);
@@ -44,4 +43,8 @@ app.get(`/room/:number`, function(request, response, error) {
 
 app.get('/data', function(request, response, error) {
   response.send(JSON.stringify(list));
+})
+
+app.get('/theme.css', function(request, response, error) {
+  response.sendFile(path.join(__dirname + '/View/theme.css'))
 })
