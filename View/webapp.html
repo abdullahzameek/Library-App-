@@ -10,7 +10,7 @@
     <script src = "instascan.min.js" type="application/javascript"></script> -->
 
     <script type="application/javascript">function MakeMarSaysSave() {
-      fetch('http://localhost:3636/dummy')
+      fetch('https://libraryapphacknyu.herokuapp.com/dummy')
         .then(function(response) {
           return response.json();
         })
@@ -108,7 +108,7 @@ p=0;Ei(69,e|0,28,i|0,r|0);Be=p;p=0;if(Be&1)break;p=0;Ge(45,u|0,18,f|0,a|0,t|0,n|
 
 
       scanner.addListener('scan', function (content,image) {
-        window.open('http://localhost:3636/room/' + content, '_self');
+        window.open('https://libraryapphacknyu.herokuapp.com/room/' + content, '_self');
         console.log(content);
         list.push(content);
         console.log(`The list is ${list}`);

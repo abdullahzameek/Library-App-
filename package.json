@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "description": "Library App for HackNYU 2018",
   "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,10 +21,5 @@
   "bugs": {
     "url": "https://github.com/abdullahzameek/Library-App-/issues"
   },
-  "homepage": "https://github.com/abdullahzameek/Library-App-#readme",
-  "dependencies": {
-    "cors": "^2.8.4",
-    "express": "^4.16.3",
-    "path": "^0.12.7"
-  }
+  "homepage": "https://github.com/abdullahzameek/Library-App-#readme"
 }
