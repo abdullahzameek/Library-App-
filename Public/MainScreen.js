@@ -28,3 +28,6 @@ function MakeMarSaysSave() {
       }
     });
 }
+function Timer(){
+alert('You have been here for almost an hour! Please sign out and sign in again!');
+}
