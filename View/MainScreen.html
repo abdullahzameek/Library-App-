@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <script src = "MainScreen.js" type="application/javascript"> </script>
+  <style>
+    body {
+    background-color: rgb(87,6,140);
+}
+
+h1 {
+    color: white;
+    margin-left: 100px;
+    text-align: center;
+    font-family = "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+button {
+    background-color: white /* Green */
+    border : solid 2px;
+    border-radius : 10px;
+    border-color: black;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    align-items: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    width: 40%
+
+}
+
+.inline {
+   display:inline-block;
+   margin-right:5px;
+}
+
+ul {
+  font-size: 20px;
+  color: ‎#90EE90;
+}
+  </style>
+  </head>
+  <body>
+    <p id = "variable"><h1 style="color:white;margin-left:100px;"> Room Status </h1> </p>
+    <button onclick = "MakeMarSaysSave();setTimeout(Timer, 3000000)";>Refresh</button>
+    <button><a href="/camera">Scan</a></button>
+    <p style="color:white"> White - "Unoccupied" </p>
+    <p style="color:red "> Red - "Occupied" </p>
+    <!-- <button onclick = "Scanner();">Camera</button> -->
+    <ul id="listOfItems" style: "font-size: 20px;"></ul>
+  </body>
+</html>
+
+
+
+    <!-- <script src = "instascan.min.js" type="application/javascript"> </script> -->
